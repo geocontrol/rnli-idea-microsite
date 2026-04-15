@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundraising Analytics — RNLI CDIO Digital Sovereignty Strategy (Independent thought experiment)</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">Legacy · Donor journey · Propensity model · CiviCRM</div>
+      <h1>Fundraising <em>Analytics</em></h1>
+      <p class="hero-sub">66% of income from legacies · Three-pipeline model · XGBoost propensity scoring · Sovereign CRM stack</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-label">Legacy share</span><span class="hero-meta-value">66% of net income (2023)</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-label">Launch-enabling</span><span class="hero-meta-value">6 in 10 launches funded by legacy gifts</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-label">CRM</span><span class="hero-meta-value">CiviCRM — open source, UK-hosted</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">The income problem</div>
+      <h2 class="section-title">When 66% of income comes from legacies</h2>
+      <p class="lead">The RNLI's income profile is unlike most charities. 66% of net income arrives via legacy gifts — from people who are no longer alive. This shapes everything: the analytics must model three parallel pipelines simultaneously, not just the current-donor health dashboard that most charities build.</p>
+
+      <div class="callout callout-amber mt-3">
+        <div class="callout-icon">⚠️</div>
+        <div>
+          <h3>The Fundraising Regulator signal</h3>
+          <p>A 2025 Fundraising Regulator investigation found gaps in how RNLI supporter experience staff document conversations — specifically around vulnerable donors, large one-off gifts, and Power of Attorney situations. This points to a CRM data model that does not adequately capture the qualitative context of donor interactions. Any analytics build must start with fixing this underlying data quality gap. The vulnerable donor flag must be a structured field, not a free-text note.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Three pipelines</div>
+      <h2 class="section-title">The analytics must model three things simultaneously</h2>
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--sea);"></div>
+          <h3>Pipeline 1: Current donor health</h3>
+          <p>Real-time view of regular giving — active donors, lapsed donors by recency band, average gift trends, Gift Aid claim rate, campaign response by segment. Monthly update to executive. Standard but must be built on sovereign infrastructure (PostgreSQL + Superset), not Salesforce or Raiser's Edge in US-jurisdiction cloud.</p>
+          <div class="tags"><span class="tag">Retention rates</span><span class="tag">Gift Aid</span><span class="tag">Superset</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <h3>Pipeline 2: Legacy intent propensity</h3>
+          <p>The highest-value investment. A machine learning model trained on historical data — which characteristics of committed supporters predicted eventual legacy notification? Output: a ranked list of supporters for legacy team outreach, refreshed quarterly. Built with XGBoost on UK infrastructure. No donor data sent to third-party AI APIs.</p>
+          <div class="tags"><span class="tag">XGBoost</span><span class="tag">SHAP explainability</span><span class="tag">Quarterly refresh</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--green);"></div>
+          <h3>Pipeline 3: Next-generation acquisition</h3>
+          <p>Where are new supporters under 45 coming from? What converts them? What retains them? Open data interactions — developers using the API, journalists citing RNLI data, students using incident data — are potential acquisition signals that current analytics does not track. Directly addresses OCOP Goal 2.3.</p>
+          <div class="tags"><span class="tag">OCOP G2.3</span><span class="tag">Open data attribution</span><span class="tag">Digital-first</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">The propensity model</div>
+      <h2 class="section-title">Legacy intent scoring: how it works</h2>
+
+      <div class="callout callout-sea mt-3">
+        <div class="callout-icon">🤖</div>
+        <div>
+          <h3>Architecture: XGBoost, not a black box</h3>
+          <p>The recommended model is XGBoost (gradient boosted decision trees). These produce interpretable feature importance scores, handle missing data gracefully — common in CRM records — work well on small-to-medium datasets (a few thousand known legacy outcomes), and do not require sending any donor data to a third-party API. The model runs entirely on RNLI UK infrastructure. Every score is accompanied by SHAP values — the specific features that drove that supporter's score — so the legacy team sees human-readable explanations, not opaque numbers.</p>
+        </div>
+      </div>
+
+      <div class="section-label mt-4">Feature groups (28 features across 5 groups)</div>
+      <div class="table-wrap mt-3">
+        <table>
+          <thead><tr><th>Feature group</th><th>Predictive weight</th><th>Key features</th></tr></thead>
+          <tbody>
+            <tr><td>Relationship tenure</td><td><span class="pill pill-green">Very high</span></td><td>Years as supporter; cumulative giving; lapse-and-return events; volunteer connection; first gift year</td></tr>
+            <tr><td>Giving behaviour</td><td><span class="pill pill-green">High</span></td><td>Regular Direct Debit flag; gift size trajectory; Gift Aid declared; large one-off gift in last 5 years</td></tr>
+            <tr><td>Engagement signals</td><td><span class="pill pill-green">High</span></td><td>Legacy-specific content opened; legacy webpage visited; information pack requested; station event attended</td></tr>
+            <tr><td>Demographic proxies</td><td><span class="pill pill-yellow">Medium</span></td><td>Age band (derived); coastal postcode; proximity to RNLI station; IMD decile; maritime activity link</td></tr>
+            <tr><td>Behavioural change signals</td><td><span class="pill pill-green">Very high (late stage)</span></td><td>DD lapsed after long tenure; requested estate/bereavement information; gift size spike; address change to smaller property</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-orange mt-4">
+        <div class="callout-icon">💡</div>
+        <div>
+          <h3>The counterintuitive finding: lapse-and-return is a positive signal</h3>
+          <p>Supporters who lapse from regular giving after a long tenure and then re-engage have elevated legacy propensity. The hypothesis: lapsing may coincide with a life change — retirement, health event, bereavement — that prompts a review of finances and charitable commitments, including Will-writing. Treating these supporters as lost is a significant missed opportunity. The model explicitly captures this pattern.</p>
+        </div>
+      </div>
+
+      <div class="section-label mt-4">Training pipeline</div>
+      <div class="table-wrap mt-3">
+        <table>
+          <thead><tr><th>Step</th><th>What happens</th><th>Tools</th></tr></thead>
+          <tbody>
+            <tr><td>1. Historical data extraction</td><td>Pull all supporter records where outcome is known — confirmed legacy notifications. This is the positive class. All other long-tenure supporters who have not pledged form the negative class.</td><td>CiviCRM extract; PostgreSQL</td></tr>
+            <tr><td>2. Feature engineering</td><td>Raw CRM data is not model-ready. Tenure, giving trajectory, lapse events, engagement scores all computed. This is 60% of the work.</td><td>Python / pandas; PostGIS; Airflow</td></tr>
+            <tr><td>3. Temporal train/validation split</td><td>Split by time — train on pledgers before year X, validate on after. Prevents data leakage. Critical for this use case.</td><td>Walk-forward validation; scikit-learn</td></tr>
+            <tr><td>4. Class imbalance handling</td><td>Legacy pledgers are ~2–5% of the supporter file. Without correction the model learns to predict "no pledge" for everyone. Apply SMOTE or class weights.</td><td>imbalanced-learn; XGBoost class weights</td></tr>
+            <tr><td>5. Model training &amp; tuning</td><td>Train XGBoost; optimise for precision-recall AUC. Hyperparameter search via Optuna. Target: AUC-PR &gt; 0.65 on held-out set.</td><td>XGBoost; Optuna; MLflow</td></tr>
+            <tr><td>6. Calibration &amp; scoring</td><td>Raw XGBoost outputs calibrated to probabilities (Platt scaling). Scores 0–100 written back to CiviCRM as custom fields.</td><td>Platt scaling; CiviCRM API</td></tr>
+            <tr><td>7. SHAP explanation layer</td><td>Top 3–5 SHAP values generated for every supporter score. Legacy team sees "Score 78: tenure +31, legacy page visit +18, DD lapse +14."</td><td>SHAP library; human-readable output</td></tr>
+            <tr><td>8. Drift monitoring</td><td>Quarterly comparison of score distribution vs actual legacy notifications. Retraining triggered if model has drifted.</td><td>Evidently AI; MLflow versioning</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Sovereign technology stack</div>
+      <h2 class="section-title">CiviCRM and the fundraising platform</h2>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--sea);"></div>
+          <h3>CiviCRM — core CRM</h3>
+          <p>Open-source nonprofit CRM. UK-hostable. Gift tracking, legacy module, Gift Aid integration, campaign management. Used by Amnesty International, Greenpeace, and UK government bodies. Active UK community. Replaces Raiser's Edge / Salesforce NPSP.</p>
+          <div class="tags"><span class="tag">Open source</span><span class="tag">UK-hostable</span><span class="tag">Legacy module</span><span class="tag">Gift Aid</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--yellow);"></div>
+          <h3>Apache Superset — analytics</h3>
+          <p>Self-hosted BI dashboards connecting directly to CiviCRM's PostgreSQL database. Donor pipeline dashboards, retention funnels, legacy propensity outputs, campaign performance — all in one UK-sovereign interface. Replaces Power BI.</p>
+          <div class="tags"><span class="tag">Open source</span><span class="tag">PostgreSQL native</span><span class="tag">UK-hostable</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--violet);"></div>
+          <h3>Python + XGBoost — propensity</h3>
+          <p>Legacy intent model built in Python. Trained on RNLI's own historical data. Runs on UK infrastructure. No donor data sent to US AI APIs. Model outputs written back to CiviCRM as supporter scores. Replaces Blackbaud AI / Salesforce Einstein.</p>
+          <div class="tags"><span class="tag">XGBoost</span><span class="tag">On-premise</span><span class="tag">No data leakage</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--green);"></div>
+          <h3>Mautic — email &amp; automation</h3>
+          <p>Open-source marketing automation. UK-hostable. CiviCRM integration. Supporter journey automation, personalised campaign triggers, Gift Aid reminder sequences, legacy cultivation journeys. Replaces Mailchimp / Dotdigital.</p>
+          <div class="tags"><span class="tag">Open source</span><span class="tag">CiviCRM integration</span><span class="tag">UK-hostable</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--orange);"></div>
+          <h3>Stripe UK + GoCardless — payments</h3>
+          <p>Stripe UK Ltd (UK-registered, UK data processing) for card donations. GoCardless (UK-founded, UK-regulated) for Direct Debit regular giving. Both integrate with CiviCRM. Lower fees than JustGiving for direct giving.</p>
+          <div class="tags"><span class="tag">UK entities</span><span class="tag">Direct Debit</span><span class="tag">Gift Aid</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <h3>Ethics &amp; governance</h3>
+          <p>Propensity scores rank intent likelihood — they do not authorise aggressive outreach. Any high-scoring supporter flagged as potentially vulnerable triggers mandatory review before contact. Board governance resolution required. Annual independent model audit. GDPR profiling disclosure in privacy notice.</p>
+          <div class="tags"><span class="tag">Vulnerable donor protection</span><span class="tag">GDPR profiling</span><span class="tag">Annual audit</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);text-decoration:none;">Mark Simpkins / Geekyoto</a> · Fundraising Analytics</p>
+      <p><a href="/" style="color:var(--grey);text-decoration:none;">← Home</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/nav.js"></script>
+<script>buildNav('/fundraising');</script>
+</body>
+</html>

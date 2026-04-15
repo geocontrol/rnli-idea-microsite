@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Annexes — RNLI CDIO Digital Sovereignty Strategy (Independent thought experiment)</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .annex-nav { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem; }
+    .annex-nav a { font-family:'Source Code Pro',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--grey); text-decoration:none; border:1px solid var(--border); padding:0.4rem 0.8rem; transition:all 0.2s; }
+    .annex-nav a:hover { color:var(--foam); border-color:var(--border-md); }
+    .annex-section { padding:3rem 0; border-top:1px solid var(--border); }
+    .annex-section:first-of-type { border-top:none; }
+    .annex-badge { display:inline-block; font-family:'Source Code Pro',monospace; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:#b39ddb; border:1px solid rgba(179,157,219,0.4); padding:0.18rem 0.6rem; border-radius:2px; margin-bottom:0.6rem; }
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">Technical depth · Policy · Architecture · Threat model</div>
+      <h1>Technical <em>Annexes</em></h1>
+      <p class="hero-sub">Annexes A–E · eLoran · GNSS · Legal · Sovereign stack · Crew threat model</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="annex-nav">
+        <a href="#annex-a">A: GNSS multi-constellation</a>
+        <a href="#annex-b">B: eLoran UK policy</a>
+        <a href="#annex-c">C: Legal framework</a>
+        <a href="#annex-d">D: Sovereign stack</a>
+        <a href="#annex-e">E: Crew threat model</a>
+      </div>
+
+      <!-- ANNEX A -->
+      <div class="annex-section" id="annex-a">
+        <div class="annex-badge">Annex A</div>
+        <h2 class="section-title">Multi-constellation GNSS: bridging the gap</h2>
+        <p class="lead">GPS is not sovereign. It is operated by the US Space Force, can be jammed by cheap equipment, spoofed by increasingly accessible hardware, and selectively degraded by the US military. The RNLI's navigation posture must not depend on any single system, operator, or jurisdiction.</p>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>System</th><th>Operator</th><th>Status</th><th>Accuracy (civilian)</th><th>RNLI position</th></tr></thead>
+            <tbody>
+              <tr><td>GPS (NAVSTAR)</td><td>US Space Force</td><td><span class="pill pill-yellow">Primary — dependency risk</span></td><td>~3–5m</td><td>Retain; document risk; do not rely on alone</td></tr>
+              <tr><td>Galileo</td><td>EU / ESA</td><td><span class="pill pill-green">Fully operational 2024</span></td><td>~1m (HAS service)</td><td>Mandate on all new kit from Phase 2</td></tr>
+              <tr><td>GLONASS</td><td>Russian Federation</td><td><span class="pill pill-red">Not recommended</span></td><td>~3–5m</td><td>Exclude — geopolitical risk; UK government guidance</td></tr>
+              <tr><td>UK-GNSS</td><td>UK Space Agency</td><td><span class="pill pill-yellow">In development</span></td><td>TBC</td><td>Monitor; early adopter position; 2030s horizon</td></tr>
+              <tr><td>IMU dead reckoning</td><td>On-vessel IMU</td><td><span class="pill pill-green">Available now</span></td><td>Degrades over time</td><td>Audit all vessels; mandatory fallback from Phase 2</td></tr>
+              <tr><td>eLoran</td><td>UK Government (GOCO)</td><td><span class="funded">£71m funded · IOC Jan 2027</span></td><td>~10–20m</td><td>Trial receivers post-IOC (Phase 4); maritime early adopter</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-yellow mt-4">
+          <div class="callout-icon">📡</div>
+          <div>
+            <h3>Hardware note: multi-constellation receivers</h3>
+            <p>Modern GPS+Galileo multi-constellation receivers (u-blox M9, u-blox F9P, Septentrio Mosaic) cost little more than GPS-only equivalents. Roke Manor Research has developed a miniaturised eLoran+GNSS combined receiver under the UK-ESA NAVISP programme — this is the receiver the UK government is procuring for its eLoran programme. RNLI should monitor its commercial availability closely and register interest with the National PNT Office.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNEX B -->
+      <div class="annex-section" id="annex-b">
+        <div class="annex-badge">Annex B</div>
+        <h2 class="section-title">eLoran: UK policy landscape</h2>
+        <p class="lead">eLoran is no longer a policy aspiration. In November 2025, the UK government committed £155m to positioning, navigation and timing resilience — £71m specifically for the National eLoran Programme.</p>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>Programme parameter</th><th>Detail</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Total PNT package</td><td>£155 million committed November 2025</td><td class="funded">Funded</td></tr>
+              <tr><td>eLoran tranche</td><td>£71 million for National eLoran Programme</td><td class="funded">Funded</td></tr>
+              <tr><td>National Timing Centre</td><td>£68 million (NPL Teddington)</td><td class="funded">Funded</td></tr>
+              <tr><td>Transmitter sites</td><td>Six: Anthorn (existing), Northern Ireland, Shetlands, Outer Hebrides, East Anglia/Dover, SW Cornwall</td><td class="watch">Procurement underway</td></tr>
+              <tr><td>IOC target</td><td>January 2027 — Anthorn timing + National Timing Centre synchronised</td><td class="watch">On track (late 2025)</td></tr>
+              <tr><td>Full CNI resilience</td><td>2029 — all UK critical national infrastructure PNT-resilient</td><td class="watch">Target</td></tr>
+              <tr><td>Signal</td><td>100kHz low-frequency; high-power; very difficult to jam; penetrates where GNSS fails</td><td>Technical</td></tr>
+              <tr><td>Ownership model</td><td>Government-owned, contractor-operated (GOCO)</td><td>Per programme spec</td></tr>
+              <tr><td>GLA connection</td><td>General Lighthouse Authorities operated Anthorn and ran differential eLoran trials on East Coast — RNLI's natural entry point</td><td class="funded">Relationship exists</td></tr>
+              <tr><td>Receiver development</td><td>Roke Manor Research: miniaturised combined eLoran+GNSS via ESA NAVISP — being procured by UK government</td><td class="funded">Developed</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-green mt-4">
+          <div class="callout-icon">🗺️</div>
+          <div>
+            <h3>Why the SW Cornwall transmitter matters for the RNLI</h3>
+            <p>The planned six sites — Anthorn, Northern Ireland, Shetlands, Outer Hebrides, East Anglia/Dover, and SW Cornwall — ring the UK coastline. The SW Cornwall site covers the Western Channel, which is the busiest small boat crossing route and where GPS jamming and spoofing incidents have been documented. RNLI should formally advocate for this site's prioritisation in the programme's coverage modelling, using its institutional standing with MCA and the General Lighthouse Authorities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNEX C -->
+      <div class="annex-section" id="annex-c">
+        <div class="annex-badge">Annex C</div>
+        <h2 class="section-title">Civic Data Commons: legal framework</h2>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>Instrument</th><th>Relevance</th><th>RNLI position</th></tr></thead>
+            <tbody>
+              <tr><td>UK GDPR</td><td>Lawful basis for all personal data processing; data minimisation; purpose limitation</td><td>Vital interests (Art.6d) and public task (Art.6e) are primary bases for rescue data; consent-based for partner sharing</td></tr>
+              <tr><td>ECHR Article 2 — Right to Life</td><td>Positive obligation to take reasonable steps to protect life; justifies data sharing that enables rescue coordination</td><td>Foundational justification for the Commons; cited in Charter as design principle</td></tr>
+              <tr><td>SOLAS Convention Chapter V</td><td>International duty to render assistance to persons in distress at sea, regardless of nationality or status</td><td>Creates operational context for data sharing; RNLI's duty to rescue is legally unconditional</td></tr>
+              <tr><td>Nationality &amp; Borders Act 2022</td><td>Criminalises facilitation of irregular entry — RNLI has legal clarity that rescue does not constitute facilitation</td><td>Legal opinion to be maintained and updated; creates no automatic immigration reporting obligation</td></tr>
+              <tr><td>Investigatory Powers Act 2016</td><td>Governs state requests for bulk data; any bulk RNLI request must satisfy this Act</td><td>Pre-agreed legal response protocols; individual court orders required for specific data</td></tr>
+              <tr><td>Charity Act 2011</td><td>RNLI must act within charitable objects; data sharing must be incidental to lifesaving purpose</td><td>All Commons activities assessed against charitable objects; legal advice for any commercial data use</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ANNEX D -->
+      <div class="annex-section" id="annex-d">
+        <div class="annex-badge">Annex D</div>
+        <h2 class="section-title">Keycloak &amp; Nextcloud: sovereign collaboration stack</h2>
+        <p class="lead">Keycloak (identity and access management) and Nextcloud (files, collaboration, communication) form the backbone of the RNLI's UK-sovereign alternative to Microsoft 365 and Azure Active Directory. Inspired by France's La Suite Numérique — deployed to 80,000+ civil servants.</p>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>Function</th><th>Tool</th><th>Replaces</th><th>Key capabilities</th></tr></thead>
+            <tbody>
+              <tr><td>Identity &amp; SSO</td><td><span class="sovereign">Keycloak 24+</span></td><td><span class="replaced">Azure Active Directory</span></td><td>SSO, MFA, RBAC, SAML/OIDC, AD federation during transition</td></tr>
+              <tr><td>File storage &amp; collab</td><td><span class="sovereign">Nextcloud Hub</span></td><td><span class="replaced">SharePoint / OneDrive</span></td><td>File sync, offline access, sharing controls, versioning, mobile apps</td></tr>
+              <tr><td>Document editing</td><td><span class="sovereign">Collabora Online (LibreOffice)</span></td><td><span class="replaced">Microsoft Office web</span></td><td>Browser-based .docx/.xlsx/.pptx editing; real-time collaboration</td></tr>
+              <tr><td>Video conferencing</td><td><span class="sovereign">Jitsi Meet (self-hosted)</span></td><td><span class="replaced">Microsoft Teams / Zoom</span></td><td>No account required for guests; E2E encryption; browser-based</td></tr>
+              <tr><td>Team messaging</td><td><span class="sovereign">Matrix / Element</span></td><td><span class="replaced">WhatsApp / Teams chat</span></td><td>E2E encrypted; federated; no US metadata; UK-hosted homeserver</td></tr>
+              <tr><td>Desktop productivity</td><td><span class="sovereign">LibreOffice 24+</span></td><td><span class="replaced">Microsoft 365 desktop</span></td><td>Full Office compatibility; Linux-native; open source</td></tr>
+              <tr><td>VPN</td><td><span class="sovereign">WireGuard</span></td><td><span class="replaced">Cisco AnyConnect</span></td><td>Modern cryptography; minimal attack surface; Linux-native</td></tr>
+              <tr><td>Analytics &amp; BI</td><td><span class="sovereign">Apache Superset</span></td><td><span class="replaced">Power BI</span></td><td>Self-hosted; SQL exploration; role-based access; UK-sovereign</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-sea mt-4">
+          <div class="callout-icon">🔐</div>
+          <div>
+            <h3>Migration approach: parallel running, not big bang</h3>
+            <p>Phase 1: Deploy Keycloak alongside Azure AD — federated identity, no disruption. Phase 2: Migrate HQ staff to Nextcloud + Collabora; retain M365 for 90-day parallel period. Phase 3: Shore stations migrated; volunteer-facing portal live. Phase 4: Azure AD decommissioned; full Keycloak sovereignty achieved. The France/Gendarmerie lesson: build internal competence first, mandate second.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNEX E -->
+      <div class="annex-section" id="annex-e">
+        <div class="annex-badge">Annex E</div>
+        <h2 class="section-title">Crew threat model</h2>
+        <p class="lead">RNLI volunteers face a threat environment that has materially changed. Crews rescuing people in the Channel have been physically targeted. Volunteers have been named on social media by hostile actors. This is not hypothetical — it has happened, and the digital dimension requires explicit modelling.</p>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>Threat actor</th><th>Motivation</th><th>Digital threat</th><th>Physical threat</th><th>Priority</th></tr></thead>
+            <tbody>
+              <tr><td>Far-right extremists</td><td>Opposition to Channel rescue; anti-immigration ideology</td><td>Social media targeting of named crew; doxxing of home addresses; harassment via messaging platforms</td><td>Station intimidation; crew harassment; obstruction of rescue operations</td><td><span class="pill pill-red">High</span></td></tr>
+              <tr><td>Organised crime (smuggling)</td><td>Avoid interception; monitor RNLI patterns</td><td>AIS monitoring (already public); attempt to access crew schedules or station availability data</td><td>Low direct threat; intelligence gathering to avoid RNLI response</td><td><span class="pill pill-yellow">Medium</span></td></tr>
+              <tr><td>Ransomware groups</td><td>Financial extortion; charities perceived as easy targets</td><td>Phishing → endpoint compromise → data encryption; donor data theft for leverage</td><td>None</td><td><span class="pill pill-red">High</span></td></tr>
+              <tr><td>Hostile state actors</td><td>Intelligence gathering; maritime infrastructure disruption</td><td>Advanced persistent threats; GNSS jamming/spoofing in operational areas</td><td>GNSS spoofing affecting navigation safety</td><td><span class="pill pill-yellow">Medium-High</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrap mt-4">
+          <table>
+            <thead><tr><th>Attack vector</th><th>Current exposure</th><th>Mitigation via sovereign stack</th></tr></thead>
+            <tbody>
+              <tr><td>Volunteer PII exposure</td><td>Names, home addresses in MS cloud (US jurisdiction)</td><td>Keycloak + Nextcloud UK-hosted; no extraterritorial access; access logs auditable</td></tr>
+              <tr><td>Crew communication metadata</td><td>WhatsApp / Teams: metadata accessible to Meta/Microsoft; US CLOUD Act</td><td>Matrix/Element: E2E encrypted; UK-hosted; no US metadata leakage</td></tr>
+              <tr><td>Ransomware via endpoint</td><td>Windows endpoints: primary ransomware target</td><td>Linux endpoints: 90%+ ransomware targets Windows; significantly smaller surface</td></tr>
+              <tr><td>GNSS spoofing at sea</td><td>GPS-only receivers: single point of failure; spoofing documented in Channel</td><td>Multi-constellation (GPS+Galileo+eLoran): three independent signals; spoofing one does not spoof all</td></tr>
+              <tr><td>Donor data theft</td><td>CRM data in potentially non-UK hosting; reputational leverage for ransomware</td><td>UK-sovereign CRM; encrypted backups; offline backup on UK infrastructure</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-red mt-4">
+          <div class="callout-icon">🛡️</div>
+          <div>
+            <h3>Immediate priority: social media monitoring for crew targeting</h3>
+            <p>The far-right targeting of RNLI crew members via social media is the most immediate and personal threat. The CDIO must: (1) implement social media monitoring that flags content involving crew names or station locations; (2) establish a rapid response protocol with communications; (3) create a secure reporting channel for targeted crew members; (4) ensure volunteer PII is not accessible via any public-facing RNLI system. Crew members who have been targeted should have access to professional support — this is not primarily an IT problem.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);text-decoration:none;">Mark Simpkins / Geekyoto</a> · Technical Annexes A–E</p>
+      <p><a href="/" style="color:var(--grey);text-decoration:none;">← Home</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/nav.js"></script>
+<script>buildNav('/annexes');</script>
+</body>
+</html>

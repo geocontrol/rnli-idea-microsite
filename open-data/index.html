@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Data — RNLI CDIO Digital Sovereignty Strategy (Independent thought experiment)</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">CC-BY · ArcGIS → PostGIS · Data as mission amplifier</div>
+      <h1>Open Data <em>Strategy</em></h1>
+      <p class="hero-sub">40,000+ incident records · Fix the licence · Expand the scope · Use data as a fundraising tool</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">The problem</div>
+      <h2 class="section-title">The RNLI has open data — but it isn't really open</h2>
+      <p class="lead">The RNLI's ArcGIS Open Data portal holds over 40,000 incident records (2020–2024), 238 lifeboat station locations, 254 lifeguard unit locations, and regional data. Local authorities, researchers, and civic technologists are using it. But the current licence is revocable, non-transferable, non-sub-licensable, and restricts derivative works. By the standards of the open data community, it is not open data.</p>
+
+      <div class="callout callout-orange mt-3">
+        <div class="callout-icon">📄</div>
+        <div>
+          <h3>The fix is simple: Creative Commons Attribution 4.0</h3>
+          <p>CC-BY 4.0 requires attribution only — the RNLI gets credited every time the data is used, which is free brand reach at scale. It makes RNLI data compatible with Ordnance Survey OpenData, ONS statistics, academic datasets, and virtually every civic tech tool. Moving from the current bespoke licence to CC-BY is a legal and policy decision, not a technical one. It should happen in Phase 2.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Dataset audit</div>
+      <h2 class="section-title">Current datasets and recommended actions</h2>
+      <div class="table-wrap mt-3">
+        <table>
+          <thead><tr><th>Dataset</th><th>Coverage</th><th>Current licence</th><th>Recommended action</th><th>Value unlocked</th></tr></thead>
+          <tbody>
+            <tr><td>Return of Service (incidents)</td><td>40,000+ points, 2020–2024</td><td><span class="pill pill-red">Bespoke — restrictive</span></td><td>Move to CC-BY 4.0; update annually</td><td>Academic research, risk modelling, civic tools, journalism</td></tr>
+            <tr><td>Lifeboat station locations</td><td>238 stations, UK + Ireland</td><td><span class="pill pill-red">Bespoke — restrictive</span></td><td>CC-BY; integrate with OS OpenData</td><td>Local authority planning, public safety apps</td></tr>
+            <tr><td>Lifeguard unit locations</td><td>254 units, March 2025</td><td><span class="pill pill-red">Bespoke — restrictive</span></td><td>CC-BY; seasonal update cadence</td><td>Tourism, local authority water safety</td></tr>
+            <tr><td>RNLI regions</td><td>Regional boundaries, Aug 2025</td><td><span class="pill pill-red">Bespoke — restrictive</span></td><td>CC-BY; align with ONS geographies</td><td>Regional analysis, partner mapping</td></tr>
+            <tr><td>Lifejacket survey</td><td>2013–2016 (stale)</td><td><span class="pill pill-red">Bespoke — restrictive</span></td><td>Resume survey; publish annually CC-BY</td><td>Water safety policy, academic use</td></tr>
+            <tr><td>Historical incidents 2008–2019</td><td>Not in current portal</td><td>N/A</td><td>Publish under CC-BY; 15-year dataset is uniquely valuable</td><td>Longitudinal research, demand prediction</td></tr>
+            <tr><td>Response time data</td><td>Not published</td><td>N/A</td><td>Assess publishability; aggregate/anonymise</td><td>Operational benchmarking, public accountability</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Fundraising and engagement</div>
+      <h2 class="section-title">Data as a fundraising and mission tool</h2>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--orange);"></div>
+          <h3>Hyperlocal supporter campaigns</h3>
+          <p>"In your area, RNLI responded to 47 incidents last year." Data-driven, emotionally resonant, donor-converting. PostGIS + Superset makes this query trivial. CC-BY data makes it publishable without licence review every time.</p>
+          <div class="tags"><span class="tag">OCOP G1.3</span><span class="tag">G2.3</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--yellow);"></div>
+          <h3>Volunteer recruitment</h3>
+          <p>Coverage gap maps showing where volunteers are most needed. Data-literate younger audiences respond to this. "Here's where we need you" is more compelling than a generic appeal. Maps the station to the person's postcode.</p>
+          <div class="tags"><span class="tag">OCOP G1.2</span><span class="tag">G2.3</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--sea);"></div>
+          <h3>Academic partnerships</h3>
+          <p>CC-BY data attracts university research partnerships — water safety, climate, coastal risk. Publications generate impact and indirect funding. RNLI data is among the most comprehensive coastal incident datasets in the world.</p>
+          <div class="tags"><span class="tag">OCOP G3.1</span><span class="tag">G3.2</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--green);"></div>
+          <h3>Policy advocacy</h3>
+          <p>Open, citable incident data supports RNLI's drowning prevention advocacy with government, WHO, and UN SDG processes. Data that others can cite is more powerful than data that only the RNLI can publish.</p>
+          <div class="tags"><span class="tag">OCOP G3.2</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--violet);"></div>
+          <h3>Civic Commons foundation</h3>
+          <p>RNLI's CC-BY open data is the founding contribution to the Civic Data Commons — demonstrating RNLI's leadership and drawing in partner charities who can see that the RNLI practices what it preaches about data sharing.</p>
+          <div class="tags"><span class="tag">OCOP G3.1</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <h3>Legacy giving narrative</h3>
+          <p>Long-term trend data — demand has grown fourfold in 50 years — makes a compelling case for legacy gifts. Open data that tells this story credibly, and can be cited by journalists and academics, strengthens the legacy cultivation programme.</p>
+          <div class="tags"><span class="tag">OCOP G1.3</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Technical architecture</div>
+      <h2 class="section-title">PostGIS sovereign mirror</h2>
+      <div class="callout callout-green">
+        <div class="callout-icon">🔧</div>
+        <div>
+          <h3>Don't depend on Esri for your own data</h3>
+          <p>The RNLI's current open data infrastructure runs on Esri ArcGIS — a proprietary, US-hosted platform. The roadmap recommends maintaining a PostGIS (PostgreSQL + spatial extension) mirror of all published datasets, hosted on UK sovereign infrastructure. This serves as: (1) a sovereign backup if Esri changes terms; (2) the data source for the internal Superset analytics platform; (3) the feed for the Civic Data Commons. The ArcGIS portal can remain as a public-facing discovery layer while PostGIS becomes the authoritative internal source. Same principle as the Linux migration: don't depend on a single US vendor for infrastructure you cannot operate independently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);text-decoration:none;">Mark Simpkins / Geekyoto</a> · Open Data</p>
+      <p><a href="/" style="color:var(--grey);text-decoration:none;">← Home</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/nav.js"></script>
+<script>buildNav('/open-data');</script>
+</body>
+</html>

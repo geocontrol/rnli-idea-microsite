@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RNLI CDIO Digital Sovereignty Strategy — An independent thought experiment</title>
+  <meta name="description" content="An independent thought experiment by Mark Simpkins of Geekyoto, exploring possible directions for the RNLI's Data and Technology strategy.">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">An independent thought experiment · Mark Simpkins · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--red);text-decoration:none;">Geekyoto ↗</a></div>
+      <h1>RNLI CDIO Digital <em>Sovereignty</em><br>Strategy</h1>
+      <p class="hero-sub">An independent thought experiment · UK-Sovereign · Open Source by Default · Human Rights by Design</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Framework</span>
+          <span class="hero-meta-value">One Crew, One Plan 2026–30</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Horizon</span>
+          <span class="hero-meta-value">24 Months / 5 Phases</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">OS Posture</span>
+          <span class="hero-meta-value">Linux-First · UK Sovereign</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">eLoran</span>
+          <span class="hero-meta-value">£71m Funded · IOC 2027</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Civic Layer</span>
+          <span class="hero-meta-value">Federated Data Commons</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Human Rights</span>
+          <span class="hero-meta-value">Built-in, Not Bolted-on</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PURPOSE -->
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Purpose of this document</div>
+      <h2 class="section-title">A strategy document, not a procurement list</h2>
+      <p class="lead">This microsite presents the strategic technology roadmap for the incoming RNLI Chief Digital and Information Officer. It is grounded in the RNLI's One Crew, One Plan 2026–30 framework and structured around a single governing principle: digital sovereignty in service of the mission to save lives at sea.</p>
+      <p>Every system, every vendor decision, every data-sharing arrangement is evaluated against two questions: does it serve the mission, and does it keep the RNLI — and the people it serves — safe? The answer to both must be yes before any technology commitment is made.</p>
+
+      <div class="callout callout-red mt-4">
+        <div class="callout-icon">🇬🇧</div>
+        <div>
+          <h3>The sovereignty doctrine</h3>
+          <p>All RNLI systems, data and operational infrastructure are operated, hosted and supported within the UK. This is not a preference — it is a strategic and operational requirement for a life-safety charity operating in UK and Irish waters. As France formally mandates Linux across 2.5 million government workstations, the technology and political context for this position has never been stronger.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-orange mt-3">
+        <div class="callout-icon">⚓</div>
+        <div>
+          <h3>Save every one — whoever they are</h3>
+          <p>The RNLI's mission is absolute: save lives at sea, regardless of nationality, legal status, or the politics of the journey. The volunteers who crew RNLI lifeboats have been physically targeted for upholding this principle. The digital infrastructure recommended here is designed to protect both the mission and the people who deliver it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK NAV CARDS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Navigate the strategy</div>
+      <h2 class="section-title">Eight workstreams</h2>
+      <p class="lead">The strategy is organised across eight interconnected workstreams, each mapped to the three goals of One Crew, One Plan.</p>
+
+      <div class="card-grid mt-4">
+
+        <a href="/roadmap" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--red);"></div>
+            <div class="section-label mt-2">24-month delivery</div>
+            <h3 class="mt-2">Roadmap</h3>
+            <p>Five phases, eight streams. Every workstream mapped to OCOP goals with milestones, KPIs and the OCOP balanced scorecard.</p>
+            <div class="tags"><span class="tag">Phase 1–5</span><span class="tag">Goal mapping</span><span class="tag">KPIs</span></div>
+          </div>
+        </a>
+
+        <a href="/sovereignty" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--violet);"></div>
+            <div class="section-label mt-2">Linux · UK hosting</div>
+            <h3 class="mt-2">Digital Sovereignty & Linux</h3>
+            <p>The France/Gendarmerie precedent. Windows → Linux migration plan. UK MSP market. Why this is a crew safety decision, not just a cost one.</p>
+            <div class="tags"><span class="tag">Ubuntu LTS</span><span class="tag">Canonical</span><span class="tag">Crew safety</span></div>
+          </div>
+        </a>
+
+        <a href="/maritime" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--foam);"></div>
+            <div class="section-label mt-2">Comms · GNSS · TAK</div>
+            <h3 class="mt-2">Maritime & Communications</h3>
+            <p>Three-tier comms architecture. FreeTAK as RNLI's own situational awareness system. Multi-constellation GNSS. eLoran — now a £71m funded UK programme.</p>
+            <div class="tags"><span class="tag">FreeTAK</span><span class="tag">Galileo</span><span class="tag">eLoran 2027</span></div>
+          </div>
+        </a>
+
+        <a href="/civic-commons" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--green);"></div>
+            <div class="section-label mt-2">Charities · Rights · Data</div>
+            <h3 class="mt-2">Civic Data Commons</h3>
+            <p>Federated data sharing with partner charities. Four-layer architecture with human rights at the core. The immigration red line. Legal framework.</p>
+            <div class="tags"><span class="tag">GDPR</span><span class="tag">ECHR Art.2</span><span class="tag">Federated</span></div>
+          </div>
+        </a>
+
+        <a href="/open-data" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--orange);"></div>
+            <div class="section-label mt-2">CC-BY · ArcGIS · PostGIS</div>
+            <h3 class="mt-2">Open Data Strategy</h3>
+            <p>40,000+ incident records, but under a restrictive licence. Moving to CC-BY. PostGIS sovereign mirror. Data as a fundraising and mission amplifier.</p>
+            <div class="tags"><span class="tag">CC-BY</span><span class="tag">Engagement</span><span class="tag">Academic</span></div>
+          </div>
+        </a>
+
+        <a href="/fundraising" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--yellow);"></div>
+            <div class="section-label mt-2">Legacy · Donor journey · CRM</div>
+            <h3 class="mt-2">Fundraising Analytics</h3>
+            <p>66% of income from legacies. Three-pipeline analytics model. The legacy propensity model. CiviCRM sovereign stack. Vulnerable donor protections.</p>
+            <div class="tags"><span class="tag">CiviCRM</span><span class="tag">XGBoost</span><span class="tag">SHAP</span></div>
+          </div>
+        </a>
+
+        <a href="/cast" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--sea);"></div>
+            <div class="section-label mt-2">Sector support · Free resources</div>
+            <h3 class="mt-2">CAST Integration</h3>
+            <p>How CAST's free programmes, toolkits and AI guidance map to every RNLI workstream. Why this is a strategic relationship, not just a resource list.</p>
+            <div class="tags"><span class="tag">AI experiments</span><span class="tag">Digital toolkit</span><span class="tag">DigiSafe</span></div>
+          </div>
+        </a>
+
+        <a href="/annexes" style="text-decoration:none;">
+          <div class="card">
+            <div class="card-accent" style="background:var(--grey);"></div>
+            <div class="section-label mt-2">Technical depth</div>
+            <h3 class="mt-2">Technical Annexes</h3>
+            <p>eLoran UK policy. Multi-constellation GNSS. Legal framework for the Commons. Keycloak & Nextcloud sovereign stack. Crew threat model.</p>
+            <div class="tags"><span class="tag">Annexes A–E</span><span class="tag">Policy</span><span class="tag">Architecture</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OCOP GOALS -->
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">One Crew, One Plan 2026–30</div>
+      <h2 class="section-title">Strategic alignment</h2>
+      <p class="lead">Every workstream in this strategy is mapped to the RNLI's three long-term goals and their specific objectives.</p>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <div class="section-label mt-2" style="color:var(--red);">Goal 1</div>
+          <h3>Independent volunteering charity & world-renowned rescue service</h3>
+          <p>Digital underpins: crew safety systems, volunteer tools, security posture, value for money, governance and reputation. CDIO owns objectives 1.1, 1.2, 1.4 and 1.5.</p>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--sea);"></div>
+          <div class="section-label mt-2" style="color:var(--foam);">Goal 2</div>
+          <h3>Deliver a sustainable, future-fit lifesaving service</h3>
+          <p>Digitally-enabled lifesaving. Core platform replacement. Service-led operating model. Fleet technology (sensors, connectivity from 2028). Climate resilience tracking. Process-first, then technology.</p>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--green);"></div>
+          <div class="section-label mt-2" style="color:#6fcf97;">Goal 3</div>
+          <h3>Influencer & catalyst for drowning prevention globally, nationally, locally</h3>
+          <p>Open data as evidence for water safety advocacy. Civic Data Commons as the infrastructure for partner sharing. Analytics feeding WHO and UN SDG drowning prevention work.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-sea mt-4">
+        <div class="callout-icon">📋</div>
+        <div>
+          <h3>The delivery model: Simplified + Support</h3>
+          <p>One Crew, One Plan is explicit about how technology must be delivered: simplified processes and operations adopting industry standards, and support services geared towards better-serving the needs of volunteers and lifesavers. This roadmap follows that model exactly: process design comes before technology selection, and every system is evaluated against volunteer usability first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANCE SIGNAL -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">External validation</div>
+      <h2 class="section-title">The moment is now</h2>
+      <p class="lead">Three developments in 2025–26 have transformed the context for this strategy from "ambitious" to "timely."</p>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--violet);"></div>
+          <h3>France mandates Linux across all government</h3>
+          <p>April 2026: France's DINUM formally mandated Linux across 2.5 million government workstations. The Gendarmerie's GendBuntu — 103,000 workstations, 40% TCO reduction — is cited as the governance model. Germany's Schleswig-Holstein: €15m saved on 30,000 workstations. The path is proven.</p>
+          <div class="tags"><span class="tag">DINUM</span><span class="tag">GendBuntu</span><span class="tag">€15m saved</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--yellow);"></div>
+          <h3>UK commits £71m to eLoran</h3>
+          <p>November 2025: the UK government committed £155m to positioning, navigation and timing resilience — £71m specifically for the National eLoran Programme. Six transmitter sites. Initial operating capability targeted January 2027. The RNLI should be an early adopter and maritime advocate now.</p>
+          <div class="tags"><span class="tag">£71m funded</span><span class="tag">IOC Jan 2027</span><span class="tag">6 sites</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <h3>Crew safety threats are real and digital</h3>
+          <p>RNLI volunteers involved in Channel rescue operations have been physically targeted and named online by hostile actors. The digital dimension of this threat — crew PII, operational patterns, donor data — requires an explicit threat model and a sovereignty posture that reduces attack surface.</p>
+          <div class="tags"><span class="tag">Threat model</span><span class="tag">Crew safety</span><span class="tag">OpSec</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAST CALLOUT -->
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Sector support</div>
+      <h2 class="section-title">CAST: free digital and AI support for charities</h2>
+      <p class="lead">CAST (Centre for the Acceleration of Social Technology) is a UK charity that helps social impact organisations make the fullest use of digital and AI — all programmes free of charge.</p>
+      <p>Their resources map directly onto this roadmap: the AI experimentation canvas for governance of the propensity model, the Digital Toolkit for the volunteer app design process, DigiSafe for digital safeguarding, and the Digital Leads Network for the Linux champion cohort. The RNLI should establish CAST as a named strategic partner in Phase 1.</p>
+      <div class="mt-4">
+        <a href="/cast" class="btn btn-primary">See the CAST integration →</a>
+        <a href="https://www.wearecast.org.uk" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-left:1rem;">Visit CAST ↗</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page-wrap -->
+
+<!-- ABOUT SECTION -->
+<section style="background:var(--deep);border-top:1px solid var(--border);padding:4rem 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+      <div>
+        <div class="section-label">About this project</div>
+        <h2 class="section-title" style="margin-bottom:1rem;">A thought experiment</h2>
+        <p>This is a small thought experiment by <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--foam);">Mark Simpkins of Geekyoto</a>. The goal was to explore some of the possible directions that the RNLI could consider in revisiting its Data and Technology strategy.</p>
+        <p style="margin-top:1rem;">It is not an official RNLI document, not an application for the CDIO role, and not a claim to know the RNLI's internal systems or constraints better than those who work there. It is what it says: a thought experiment — an attempt to think seriously about what digital sovereignty, open-source infrastructure, and human-rights-first data architecture might look like for one of the UK's most cherished and important charities.</p>
+        <div class="mt-4">
+          <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" class="btn btn-primary">Read the blog post →</a>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">About the author</div>
+        <div style="display:flex;align-items:start;gap:1.2rem;margin-top:0.6rem;">
+          <div style="width:52px;height:52px;border-radius:50%;background:var(--horizon);border:2px solid var(--border-md);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1.2rem;color:var(--foam);flex-shrink:0;">M</div>
+          <div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">Mark Simpkins</h3>
+            <p style="font-family:'Source Code Pro',monospace;font-size:0.62rem;letter-spacing:0.08em;color:var(--grey);text-transform:uppercase;margin-bottom:0.8rem;">Technical Programme Manager · CISSP · CompTIA SecurityX</p>
+            <p style="font-size:0.8rem;">Mark is an independent consultant and solo founder with 25+ years of experience across digital product delivery, security, and programme management. He writes about technology, open source, digital sovereignty, and civic tech at <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--foam);">Geekyoto</a>.</p>
+            <p style="font-size:0.8rem;margin-top:0.75rem;">His interest in the RNLI is personal as much as professional — growing up with the ladybird books, Blue Peter fundraising appeals, and a habit of seeking out lifeboat stations on coastal holidays has given the RNLI an unusually large presence in his life. This project is a small way of thinking seriously about how an organisation that matters might navigate the technology decisions ahead of it.</p>
+            <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.58rem;">Geekyoto ↗</a>
+              <a href="https://github.com/Geocontrol" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.58rem;">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>RNLI CDIO Strategy</h3>
+        <p>An independent thought experiment by <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--foam);opacity:1;">Mark Simpkins of Geekyoto</a>. Not an official RNLI publication. UK-sovereign. Open source by default. Human rights by design.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Strategy</h4>
+        <ul>
+          <li><a href="/roadmap">24-Month Roadmap</a></li>
+          <li><a href="/sovereignty">Sovereignty & Linux</a></li>
+          <li><a href="/maritime">Maritime & Comms</a></li>
+          <li><a href="/civic-commons">Civic Commons</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Deep dives</h4>
+        <ul>
+          <li><a href="/open-data">Open Data</a></li>
+          <li><a href="/fundraising">Fundraising Analytics</a></li>
+          <li><a href="/cast">CAST Integration</a></li>
+          <li><a href="/annexes">Technical Annexes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>References</h4>
+        <ul>
+          <li><a href="https://rnli.org/about-us/our-strategy" target="_blank" rel="noopener">One Crew, One Plan</a></li>
+          <li><a href="https://data-rnli.opendata.arcgis.com/" target="_blank" rel="noopener">RNLI Open Data</a></li>
+          <li><a href="https://www.wearecast.org.uk" target="_blank" rel="noopener">CAST</a></li>
+          <li><a href="https://www.geekyoto.com/" target="_blank" rel="noopener">Geekyoto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);">Mark Simpkins / Geekyoto</a> · Not an official RNLI publication</p>
+      <p>Built with open web standards · Deployable to Vercel</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/nav.js"></script>
+<script>buildNav('/');</script>
+</body>
+</html>

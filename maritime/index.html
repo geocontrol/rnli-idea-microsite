@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maritime & Comms — RNLI CDIO Digital Sovereignty Strategy (Independent thought experiment)</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">FreeTAK · Meshtastic · Galileo · eLoran 2027</div>
+      <h1>Maritime &amp; <em>Communications</em></h1>
+      <p class="hero-sub">Three-tier comms · Shore-first sequencing · GNSS independence · £71m eLoran programme</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Architecture principle</div>
+      <h2 class="section-title">Shore first, vessel second</h2>
+      <p class="lead">One Crew, One Plan places enhanced vessel sensor technology in the 2030–2035 window. This roadmap builds shore infrastructure first — FreeTAK at stations, mesh nodes along the coast, OpenCPN displays, data pipelines — so that when vessel-level sensors arrive, the receiving infrastructure is already proven. 98% of RNLI launches are within 10 nautical miles of shore: the near-shore digital layer is the priority.</p>
+
+      <div class="callout callout-sea mt-3">
+        <div class="callout-icon">🛥️</div>
+        <div>
+          <h3>RNLI's own TAK: FreeTAK as the operational nerve system</h3>
+          <p>The US military's TAK (Team Awareness Kit) ecosystem has been open-sourced as FreeTAK. This gives the RNLI a fully self-hosted Common Operating Picture — real-time position reporting, incident markers, resource tracking, and inter-agency data sharing — with no dependency on US government infrastructure. FreeTAK Server runs on Linux, connects to ATAK clients on crew Android tablets, and integrates with AIS, OpenCPN, and sensor feeds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Three-tier comms stack</div>
+      <h2 class="section-title">No single communications dependency</h2>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--red);"></div>
+          <h3>Tier 1: Primary comms</h3>
+          <p>VHF DSC (SOLAS standard), 4G/5G broadband data uplink, MCA Coastguard TETRA interop, AIS on all craft, Iridium satellite for blue-water operations. These are the standard operational communications — retained and integrated.</p>
+          <div class="tags"><span class="tag">SOLAS</span><span class="tag">VHF DSC</span><span class="tag">Iridium</span><span class="tag">4G/5G</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--orange);"></div>
+          <h3>Tier 2: RNLI-TAK (FreeTAK)</h3>
+          <p>Self-hosted FreeTAK Server on UK Linux infrastructure. ATAK on crew Android tablets. Cursor on Target (CoT) protocol data sharing between stations, lifeguards, and Coastguard. Operates without internet connectivity once the shore network is established.</p>
+          <div class="tags"><span class="tag">FreeTAK</span><span class="tag">ATAK</span><span class="tag">UK-hosted</span><span class="tag">CoT protocol</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--yellow);"></div>
+          <h3>Tier 3: Mesh (last resort)</h3>
+          <p>Meshtastic LoRa mesh nodes at every station — boat-to-boat and boat-to-shore when all other links are down. Battery-operated, self-healing, no internet dependency. Ofcom-compliant frequencies. The tertiary layer that keeps the RNLI communicating when everything else fails.</p>
+          <div class="tags"><span class="tag">Meshtastic</span><span class="tag">LoRa</span><span class="tag">Offline</span><span class="tag">Self-healing</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Positioning and navigation</div>
+      <h2 class="section-title">GNSS independence: the four-layer strategy</h2>
+      <p class="lead">GPS is US-operated and can be jammed, spoofed, or selectively degraded. The RNLI's navigation posture must not depend on any single system, any single operator, or any single jurisdiction.</p>
+
+      <div class="table-wrap mt-4">
+        <table>
+          <thead><tr><th>System</th><th>Operator</th><th>Status</th><th>RNLI position</th></tr></thead>
+          <tbody>
+            <tr><td>GPS (NAVSTAR)</td><td>US Space Force</td><td><span class="pill pill-yellow">Primary — dependency risk</span></td><td>Retain as primary; document geopolitical risk; do not rely on alone</td></tr>
+            <tr><td>Galileo</td><td>EU / ESA</td><td><span class="pill pill-green">Fully operational</span></td><td>Mandate on all new RNLI kit from Phase 2; 1m accuracy in UK waters</td></tr>
+            <tr><td>UK-GNSS</td><td>UK Space Agency</td><td><span class="pill pill-yellow">In development</span></td><td>Monitor; seek early adopter position; not a near-term dependency</td></tr>
+            <tr><td>eLoran</td><td>UK Government (GOCO)</td><td><span class="funded">£71m funded · IOC Jan 2027</span></td><td>Trial receivers post-IOC (Phase 4); maritime early adopter; advocate via GLA</td></tr>
+            <tr><td>IMU dead reckoning</td><td>On-vessel IMU</td><td><span class="pill pill-green">Available now</span></td><td>Audit all vessels; document fallback procedure; mandatory from Phase 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-yellow mt-4">
+        <div class="callout-icon">📡</div>
+        <div>
+          <h3>eLoran: no longer a policy aspiration</h3>
+          <p>In November 2025, the UK government committed £71m to the National eLoran Programme — six transmitter sites, initial operating capability January 2027, full CNI resilience by 2029. The planned SW Cornwall transmitter is particularly significant for RNLI Channel and Celtic Sea operations. The RNLI should formally register as an interested maritime stakeholder with the National PNT Office in Phase 1 and engage the General Lighthouse Authorities (who operate the Anthorn transmitter and have deep eLoran expertise) as the natural RNLI connection into the programme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Open source maritime stack</div>
+      <h2 class="section-title">Chart plotting, AIS and vessel data</h2>
+
+      <div class="table-wrap mt-3">
+        <table>
+          <thead><tr><th>Function</th><th>Open source tool</th><th>Replaces</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Situational awareness</td><td><span class="sovereign">FreeTAK Server + ATAK</span></td><td><span class="replaced">Commercial COP systems</span></td><td>Self-hosted; RNLI-controlled; CoT protocol</td></tr>
+            <tr><td>Chart plotting (shore)</td><td><span class="sovereign">OpenCPN + UKHO ENCs</span></td><td><span class="replaced">Proprietary plotters</span></td><td>Full NMEA support; runs on Pi; UKHO authoritative charts</td></tr>
+            <tr><td>AIS processing</td><td><span class="sovereign">GPSD + SignalK</span></td><td><span class="replaced">Proprietary AIS software</span></td><td>Open protocol; REST/WebSocket; real-time vessel tracking</td></tr>
+            <tr><td>Vessel data hub</td><td><span class="sovereign">SignalK (NMEA aggregator)</span></td><td><span class="replaced">Proprietary multiplexers</span></td><td>Aggregates all vessel sensors; plugin ecosystem</td></tr>
+            <tr><td>Mesh comms</td><td><span class="sovereign">Meshtastic / LoRa</span></td><td>New capability</td><td>Boat-to-boat; boat-to-shore; no internet needed</td></tr>
+            <tr><td>Shore VPN</td><td><span class="sovereign">WireGuard</span></td><td><span class="replaced">Proprietary VPN</span></td><td>All stations to Poole HQ; UK-hosted endpoints</td></tr>
+            <tr><td>Weather integration</td><td><span class="sovereign">Met Office API + Open-Meteo</span></td><td><span class="replaced">Paid weather feeds</span></td><td>UK Met Office data; open data; integrated into analytics</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);text-decoration:none;">Mark Simpkins / Geekyoto</a> · Maritime &amp; Comms</p>
+      <p><a href="/" style="color:var(--grey);text-decoration:none;">← Home</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/nav.js"></script>
+<script>buildNav('/maritime');</script>
+</body>
+</html>

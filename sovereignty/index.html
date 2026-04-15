@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Sovereignty & Linux — RNLI CDIO Digital Sovereignty Strategy (Independent thought experiment)</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav"></nav>
+<div class="mobile-menu" id="mobile-menu"></div>
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-tag">Windows → Linux · UK hosting · Crew safety decision</div>
+      <h1>Digital <em>Sovereignty</em><br>&amp; Linux Migration</h1>
+      <p class="hero-sub">The France precedent · UK MSP market · Why this is a crew safety decision, not just a cost one</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-label">The France precedent</div>
+      <h2 class="section-title">This is now a proven path</h2>
+      <p class="lead">In April 2026, France's DINUM formally mandated Linux across all government desktops — an estimated 2.5 million workstations. The French Gendarmerie's GendBuntu deployment reached 97% of its 103,000 workstations by 2024, saving approximately €2m per year in licensing and reducing total cost of ownership by 40%. Germany's Schleswig-Holstein completed nearly 80% of its 30,000-workstation migration by early 2026, recording €15m in savings.</p>
+
+      <div class="callout callout-red mt-3">
+        <div class="callout-icon">🛡️</div>
+        <div>
+          <h3>This is a crew safety decision</h3>
+          <p>The case for Linux is not primarily about cost. RNLI volunteers involved in Channel rescue operations have been named online and physically targeted by hostile actors. The digital dimension of this threat — crew PII in US-jurisdiction cloud, operational patterns in proprietary telemetry, donor data as ransomware leverage — is real. A UK-sovereign, Linux-based estate has a materially smaller attack surface, no extraterritorial data jurisdiction, and no Microsoft telemetry leaking operational patterns to third parties.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap mt-4">
+        <table>
+          <thead><tr><th>Area</th><th>Current</th><th>Target</th><th>Phase</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>HQ workstations</td><td><span class="replaced">Windows 10/11</span></td><td><span class="sovereign">Ubuntu 24.04 LTS</span></td><td>Phase 2–3</td><td>First wave; lower operational risk; build internal confidence</td></tr>
+            <tr><td>Shore station displays</td><td><span class="replaced">Windows kiosks</span></td><td><span class="sovereign">Raspberry Pi 5 + Debian</span></td><td>Phase 2–3</td><td>OpenCPN, FreeTAK client, situational displays</td></tr>
+            <tr><td>Servers &amp; infrastructure</td><td><span class="replaced">Windows Server</span></td><td><span class="sovereign">Debian / Ubuntu Server + Docker</span></td><td>Phase 2–3</td><td>Ansible-managed; containerised workloads</td></tr>
+            <tr><td>Office productivity</td><td><span class="replaced">Microsoft 365</span></td><td><span class="sovereign">LibreOffice + Nextcloud (UK-hosted)</span></td><td>Phase 3–5</td><td>Hybrid initially; full migration over 24 months</td></tr>
+            <tr><td>Email &amp; collaboration</td><td><span class="replaced">Exchange / Teams</span></td><td><span class="sovereign">Nextcloud + Jitsi (UK-hosted)</span></td><td>Phase 3–4</td><td>Inspired by France's Visio/Tchap model</td></tr>
+            <tr><td>Identity &amp; access</td><td><span class="replaced">Azure Active Directory</span></td><td><span class="sovereign">Keycloak (self-hosted, UK)</span></td><td>Phase 2–3</td><td>Open-source SSO; AD federation during transition</td></tr>
+            <tr><td>Support contract</td><td><span class="replaced">Microsoft Enterprise Agreement</span></td><td><span class="sovereign">UK Linux MSP (Canonical / Codethink)</span></td><td>Phase 2</td><td>Ubuntu Advantage Pro; UK-registered, UK-staffed</td></tr>
+            <tr><td>Training</td><td>Ad hoc / Microsoft</td><td><span class="sovereign">LPI Linux Essentials + RNLI custom track</span></td><td>Phase 2+</td><td>Delivered by UK partners; volunteer-accessible</td></tr>
+            <tr><td>Vessel / embedded systems</td><td>Mixed / proprietary</td><td><span class="sovereign">Linux embedded (Yocto/Buildroot)</span></td><td>Phase 4–5</td><td>Aligned with 2028 coastal lifeboat class</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-label mt-4">Why Linux mitigates the threat</div>
+      <h3 class="sub-title">The security case</h3>
+      <div class="table-wrap mt-3">
+        <table>
+          <thead><tr><th>Risk</th><th>Windows / US-cloud exposure</th><th>Linux / UK-sovereign mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Hostile actor targeting</td><td>Larger attack surface; proprietary vulnerabilities; slower patching cycle</td><td>Open source: vulnerabilities visible and patched faster; smaller footprint</td></tr>
+            <tr><td>Crew identity exposure</td><td>Volunteer PII in US-jurisdiction cloud; subject to US CLOUD Act demands</td><td>UK-hosted; UK GDPR jurisdiction; no extraterritorial access</td></tr>
+            <tr><td>Operational pattern intelligence</td><td>Microsoft telemetry; third-party analytics risk</td><td>No telemetry; operational data stays on RNLI infrastructure</td></tr>
+            <tr><td>Ransomware</td><td>90%+ of ransomware targets Windows; documented RNLI-sector attacks on charities</td><td>Linux ransomware rate significantly lower; hardened endpoints</td></tr>
+            <tr><td>Geopolitical service risk</td><td>US policy changes could affect service availability or access</td><td>UK-sovereign stack has no extraterritorial dependency</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--deep);">
+    <div class="container">
+      <div class="section-label">Training and support</div>
+      <h2 class="section-title">The volunteer literacy challenge</h2>
+      <p class="lead">50,000+ volunteers use RNLI systems with varying digital literacy. The migration must be designed with volunteers, not for them.</p>
+
+      <div class="card-grid mt-4">
+        <div class="card">
+          <div class="card-accent" style="background:var(--violet);"></div>
+          <h3>LPI Linux Essentials</h3>
+          <p>Industry-standard Linux certification. Foundation level — appropriate for all staff. UK training partners deliver this. RNLI should target LPI certification for every IT staff member and one Linux champion per shore station by Phase 5.</p>
+          <div class="tags"><span class="tag">LPI</span><span class="tag">UK training</span><span class="tag">Foundation level</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--sea);"></div>
+          <h3>Linux champion network</h3>
+          <p>One trained Linux champion per station — the local go-to person for questions during migration. Recruited from existing volunteer digital enthusiasts. Supported by the CAST Digital Leads Network. Cost: time, not money.</p>
+          <div class="tags"><span class="tag">1 per station</span><span class="tag">CAST network</span><span class="tag">Peer support</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--green);"></div>
+          <h3>90-day parallel running</h3>
+          <p>No big-bang cutover. Every migrated workstation runs alongside Windows for 90 days. Staff choose when they're ready to switch fully. The France/Gendarmerie model: build internal competence before mandating, not the reverse.</p>
+          <div class="tags"><span class="tag">Parallel running</span><span class="tag">Low friction</span><span class="tag">Staff-led</span></div>
+        </div>
+        <div class="card">
+          <div class="card-accent" style="background:var(--orange);"></div>
+          <h3>UK MSP support contract</h3>
+          <p>24/7 helpdesk for Linux workstations and servers. On-site SLA for critical station failures. UK-registered, UK-staffed. Canonical Ubuntu Advantage Pro or equivalent. Shortlist: Canonical, Codethink, SUSE UK. Consider charity consortium for volume pricing.</p>
+          <div class="tags"><span class="tag">Canonical</span><span class="tag">Codethink</span><span class="tag">24/7 SLA</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>An independent thought experiment · <a href="https://www.geekyoto.com/" target="_blank" rel="noopener" style="color:var(--grey);text-decoration:none;">Mark Simpkins / Geekyoto</a> · Sovereignty &amp; Linux</p>
+      <p><a href="/" style="color:var(--grey);text-decoration:none;">← Home</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/nav.js"></script>
+<script>buildNav('/sovereignty');</script>
+</body>
+</html>
