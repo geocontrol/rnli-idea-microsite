@@ -89,3 +89,7 @@ Built on a maritime editorial aesthetic: dark navy base, foam and red accents, P
 - CAST references link to public CAST resources at wearecast.org.uk
 - eLoran programme references sourced from UK government publications and Inside GNSS
 - RNLI open data portal: data-rnli.opendata.arcgis.com
+
+- Email: mark@geekyoto.com 
+- Blog: https://www.geekyoto.com/
+
